@@ -20,8 +20,8 @@ $password=$_POST['password'];
 // To protect MySQL injection (more detail about MySQL injection)
 $email = stripslashes($email);
 $password = stripslashes($password);
-$myusername = mysql_real_escape_string($myusername);
-$mypassword = mysql_real_escape_string($mypassword);
+$email = mysql_real_escape_string($email);
+$password = mysql_real_escape_string($password);
 $sql="SELECT * FROM $signup_tbl WHERE email='$email' and password='$password'";
 $result=mysql_query($sql);
 
