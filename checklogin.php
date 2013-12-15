@@ -27,10 +27,11 @@ $sql = "SELECT * FROM signup_tbl WHERE email='$myemail' and password='$mypasswor
 $result = $conn->query($sql);
 $result2 = $result->fetchAll();
 $count = count($result2);
-
+/*
 echo $myemail;
 echo $mypassword;
 echo $count;
+*/
 //$count=mysql_num_rows($result);
 
 
@@ -38,7 +39,6 @@ echo $count;
 if($count==1){
 
 // Register $myemail, $mypassword and redirect to file "login_success.php"
-echo "Login Succesful!";
 session_register("myemail");
 session_register("mypassword"); 
 header("location:login_success.php");
