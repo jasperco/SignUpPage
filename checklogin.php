@@ -35,6 +35,7 @@ $count = intval($result);
 if($count==1){
 
 // Register $myemail, $mypassword and redirect to file "login_success.php"
+echo "Login Succesful!";
 session_register("myemail");
 session_register("mypassword"); 
 header("location:login_success.php");
