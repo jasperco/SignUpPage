@@ -42,11 +42,8 @@ try {
 catch(Exception $e){
     die(var_dump($e));
 }
-$name = $_POST['name'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-if
-if(!empty($_POST)) {
+
+if(!empty($_POST['name'] && !empty($_POST['email']) && !empty($_POST['password'])) {
 try {
     $name = $_POST['name'];
     $email = $_POST['email'];
