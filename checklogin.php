@@ -28,9 +28,8 @@ $result=mysql_query($sql);
 
 // Mysql_num_row is counting table row
 $count=mysql_num_rows($result);
-countlines = $count;
-echo countlines;
 
+echo $count;
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
 
