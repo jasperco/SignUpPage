@@ -23,11 +23,12 @@ $mypassword = stripslashes($mypassword);
 $myemail = mysql_real_escape_string($myemail);
 $mypassword = mysql_real_escape_string($mypassword);
 
-$sql="SELECT * FROM signup_tbl WHERE email='$myemail' and password='$mypassword'";
-$result=mysql_query($sql);
+$sql = "SELECT COUNT(*) FROM signup_tbl WHERE email='$myemail' and password='$mypassword'";
+$count = $conn->query($sql);
 
 // Mysql_num_row is counting table row
-$count=mysql_num_rows($result);
+
+//$count=mysql_num_rows($result);
 
 
 // If result matched $username and $password, table row must be 1 row
