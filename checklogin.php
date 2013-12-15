@@ -39,9 +39,9 @@ echo $count;
 if($count==1){
 
 // Register $myemail, $mypassword and redirect to file "login_success.php"
+echo "Login Successful!";
 session_register("myemail");
 session_register("mypassword"); 
-echo "Login Successful!";
 header("location: login_success.php");
 }
 else {
