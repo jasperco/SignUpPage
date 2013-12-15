@@ -16,7 +16,11 @@
 </style>
 </head>
 <body>
-<h1>Register here!</h1>
+<h1>Login here!</h1>
+<a href="signuppage.azurewebsites.net/main_login.php">
+   <input type="button" value="Login Page" />
+</a>
+<h3> Register!</h3>
 <p>Fill in your name, email address and password then click <strong>Submit</strong> to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
