@@ -46,7 +46,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 if
-if(!empty($_POST['name'] && !empty($_POST['email']) && !empty($_POST['password'])) {
+if(!empty($_POST)) {
 try {
     $name = $_POST['name'];
     $email = $_POST['email'];
