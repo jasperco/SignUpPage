@@ -17,7 +17,7 @@
 </head>
 <body>
 <h1>Login here!</h1>
-<a href="signuppage.azurewebsites.net/main_login.php">
+<a href="main_login.php">
    <input type="button" value="Login Page" />
 </a>
 <h3> Register!</h3>

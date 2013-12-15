@@ -1,5 +1,5 @@
 <?php
-/*
+
 $host = "tcp:r9n40cwt90.database.windows.net,1433";
 $user = "jasperco@r9n40cwt90";
 $pwd = "Lisanna15!";
@@ -12,16 +12,17 @@ try {
 catch(Exception $e){
     die(var_dump($e));
 }
-*/
 // username and password sent from form 
 $myemail=$_POST['myemail']; 
 $mypassword=$_POST['mypassword'];
 
 // To protect MySQL injection (more detail about MySQL injection)
+/*
 $mymyemail = stripslashes($myemail);
 $mypassword = stripslashes($mypassword);
 $myemail = mysql_real_escape_string($myemail);
 $mypassword = mysql_real_escape_string($mypassword);
+*/
 $sql="SELECT * FROM signup_tbl WHERE email='$myemail' and password='$mypassword'";
 $result=mysql_query($sql);
 
