@@ -17,12 +17,12 @@ $myemail=$_POST['myemail'];
 $mypassword=$_POST['mypassword'];
 
 // To protect MySQL injection (more detail about MySQL injection)
-
+/*
 $mymyemail = stripslashes($myemail);
 $mypassword = stripslashes($mypassword);
 $myemail = mysql_real_escape_string($myemail);
 $mypassword = mysql_real_escape_string($mypassword);
-
+*/
 $sql = "SELECT COUNT(*) FROM signup_tbl WHERE email='$myemail' and password='$mypassword'";
 $count = $conn->query($sql);
 
