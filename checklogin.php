@@ -1,13 +1,18 @@
 <?php
-
+/*
 $host = "tcp:r9n40cwt90.database.windows.net,1433";
 $user = "jasperco@r9n40cwt90";
 $pwd = "Lisanna15!";
 $db = "jasperjA3q9lHuLk";
 // Connect to database.
-mysql_connect("$host", "$user", "$pwd")or die("cannot connect"); 
-mysql_select_db("$db")or die("cannot select DB");
-
+try {
+    $conn = new PDO( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch(Exception $e){
+    die(var_dump($e));
+}
+*/
 // username and password sent from form 
 $myemail=$_POST['myemail']; 
 $mypassword=$_POST['mypassword'];
