@@ -40,7 +40,6 @@ session_register("mypassword");
 header("location:login_success.php");
 }
 else {
-echo $count;
 echo "Wrong Email or Password";
 }
 ?>
