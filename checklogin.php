@@ -14,15 +14,15 @@ catch(Exception $e){
 }
 
 // username and password sent from form 
-$email=$_POST['email']; 
-$password=$_POST['password']; 
+$myemail=$_POST['myemail']; 
+$mypassword=$_POST['mypassword']; 
 
 // To protect MySQL injection (more detail about MySQL injection)
-$email = stripslashes($email);
-$password = stripslashes($password);
-$email = mysql_real_escape_string($email);
-$password = mysql_real_escape_string($password);
-$sql="SELECT * FROM $signup_tbl WHERE email='$email' and password='$password'";
+$mymyemail = stripslashes($myemail);
+$mypassword = stripslashes($mypassword);
+$myemail = mysql_real_escape_string($myemail);
+$mypassword = mysql_real_escape_string($mypassword);
+$sql="SELECT * FROM $signup_tbl WHERE email='$myemail' and password='$mypassword'";
 $result=mysql_query($sql);
 
 // Mysql_num_row is counting table row
@@ -31,9 +31,9 @@ $count=mysql_num_rows($result);
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
 
-// Register $myusername, $mypassword and redirect to file "login_success.php"
-session_register("email");
-session_register("password"); 
+// Register $myemail, $mypassword and redirect to file "login_success.php"
+session_register("myemail");
+session_register("mypassword"); 
 header("location:login_success.php");
 }
 else {
