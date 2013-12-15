@@ -17,17 +17,19 @@ $myemail=$_POST['myemail'];
 $mypassword=$_POST['mypassword'];
 
 // To protect MySQL injection (more detail about MySQL injection)
-/*
+
 $mymyemail = stripslashes($myemail);
 $mypassword = stripslashes($mypassword);
 $myemail = mysql_real_escape_string($myemail);
 $mypassword = mysql_real_escape_string($mypassword);
-*/
+
 $sql="SELECT * FROM signup_tbl WHERE email='$myemail' and password='$mypassword'";
 $result=mysql_query($sql);
 
 // Mysql_num_row is counting table row
 $count=mysql_num_rows($result);
+countlines = $count;
+echo countlines;
 
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
