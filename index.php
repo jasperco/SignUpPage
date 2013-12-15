@@ -45,7 +45,7 @@ try {
     $password = $_POST['password'];
     $date = date("Y-m-d");
     // Insert data
-    $sql_insert = "INSERT INTO registration_tbl (name, email, password, date) 
+    $sql_insert = "INSERT INTO signup_tbl (name, email, password, date) 
                    VALUES (?,?,?,?)";
     $stmt = $conn->prepare($sql_insert);
     $stmt->bindValue(1, $name);

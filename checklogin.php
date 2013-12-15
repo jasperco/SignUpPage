@@ -22,7 +22,7 @@ $email = stripslashes($email);
 $password = stripslashes($password);
 $myusername = mysql_real_escape_string($myusername);
 $mypassword = mysql_real_escape_string($mypassword);
-$sql="SELECT * FROM $registration_tbl WHERE email='$email' and password='$password'";
+$sql="SELECT * FROM $signup_tbl WHERE email='$email' and password='$password'";
 $result=mysql_query($sql);
 
 // Mysql_num_row is counting table row
