@@ -41,7 +41,7 @@ if($count==1){
 // Register $myemail, $mypassword and redirect to file "login_success.php"
 session_register("myemail");
 session_register("mypassword"); 
-header("location:login_success.php");
+header('location: login_success.php');
 }
 else {
 echo "Wrong Email or Password";
