@@ -23,12 +23,11 @@ $mypassword = stripslashes($mypassword);
 $myemail = mysql_real_escape_string($myemail);
 $mypassword = mysql_real_escape_string($mypassword);
 */
-$sql = "SELECT COUNT(*) FROM signup_tbl WHERE email='$myemail' and password='$mypassword'";
+$sql = "SELECT * FROM signup_tbl WHERE email='$myemail' and password='$mypassword'";
 $result = $conn->query($sql);
+$result2 = $result->fetchAll();
+$count = count($result2);
 
-$count = intval($result);
-
-echo $result;
 echo $myemail;
 echo $mypassword;
 echo $count;
