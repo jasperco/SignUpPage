@@ -25,7 +25,7 @@ $mypassword = mysql_real_escape_string($mypassword);
 */
 $sql = "SELECT COUNT(*) FROM signup_tbl WHERE email='$myemail' and password='$mypassword'";
 $count = $conn->query($sql);
-
+echo intval($count); 
 // Mysql_num_row is counting table row
 
 //$count=mysql_num_rows($result);
