@@ -28,6 +28,7 @@ $result = $conn->query($sql);
 
 $count = intval($result);
 
+echo $result;
 echo $myemail;
 echo $mypassword;
 echo $count;
