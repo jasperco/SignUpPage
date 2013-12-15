@@ -29,7 +29,7 @@ $result=mysql_query($sql);
 // Mysql_num_row is counting table row
 $count=mysql_num_rows($result);
 
-echo $count;
+
 // If result matched $username and $password, table row must be 1 row
 if($count==1){
 
@@ -39,6 +39,7 @@ session_register("mypassword");
 header("location:login_success.php");
 }
 else {
+echo $count;
 echo "Wrong Email or Password";
 }
 ?>
