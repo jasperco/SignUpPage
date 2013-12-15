@@ -63,7 +63,10 @@ catch(Exception $e) {
     die(var_dump($e));
 }
 echo "<h3>Your're registered!</h3>";
-}/*
+}
+else
+	echo "<h3>Input all fields!</h3>";
+/*
 $sql_select = "SELECT * FROM signup_tbl";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
